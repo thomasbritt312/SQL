@@ -1,0 +1,26 @@
+-- create a Golf Store database
+
+CREATE TABLE golf (id INTEGER PRIMARY KEY, item TEXT, brand TEXT, handed TEXT, size TEXT, price INTEGER, aisle INTEGER);
+
+INSERT INTO golf VALUES (1, "Driver", "Callaway", "Right", "Adult", 299.99, 5);
+INSERT INTO golf VALUES (2, "Driver", "Callaway", "Left", "Adult", 289.99, 5);
+INSERT INTO golf VALUES (3, "3 Wood", "Callaway", "Right", "Adult", 199.99, 5);
+INSERT INTO golf VALUES (4, "Iron Set", "Slazenger", "Right", "Adult", 179.99, 4);
+INSERT INTO golf VALUES (5, "Putter", "Slazenger", "Right", "Adult", 79.95, 3);
+INSERT INTO golf VALUES (6, "Iron Set", "Top Flight", "Left", "Adult", 129.95, 4);
+INSERT INTO golf VALUES (7, "Putter", "Top Flight", "Right", "Adult", 79.95, 3);
+INSERT INTO golf VALUES (8, "Golf Balls", "Titleist", "N/A", "12 Pack", 24.95, 2);
+INSERT INTO golf VALUES (9, "Clubs & Bag Set", "Wilson", "Right", "Junior", 89.95, 6);
+INSERT INTO golf VALUES (10, "Clubs & Bag Set", "Wilson", "Left", "Junior", 89.95, 6);
+INSERT INTO golf VALUES (11, "Golf Balls", "Callaway", "N/A", "24 Pack", 34.97, 2);
+INSERT INTO golf VALUES (12, "Glove", "Slazenger", "Right", "Adult", 13.99, 1);
+INSERT INTO golf VALUES (13, "Glove", "Titleist", "Left", "Adult", 13.99, 1);
+INSERT INTO golf VALUES (14, "Glove", "Wilson", "Left", "Junior", 9.95, 1);
+INSERT INTO golf VALUES (15, "Hybrid Driver", "Titleist", "Right", "Adult", 84.95, 5);
+
+--display sum of all items in database
+SELECT SUM(price) FROM golf;
+
+--display the database ordered by the price
+SELECT * FROM golf
+ORDER BY price asc;
